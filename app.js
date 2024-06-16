@@ -18,7 +18,11 @@ let leidoNuevo = false;
 
 
 //eventos
-
+overlay.addEventListener('click',()=>{
+    popup.classList.toggle('activo');
+    overlay.style.display = 'none';
+    resetFormulario();
+});
 botonNuevoLibro.addEventListener('click',()=>{
     popup.classList.toggle('activo');
     botonNuevoLibro.classList.add('oculto');
@@ -93,7 +97,7 @@ botonEnviar.addEventListener('click',(e)=>{
         anadirLibro(tituloNuevo, autorNuevo, paginasNuevo, leidoNuevo);
         popup.classList.remove('activo');
         resetFormulario();
-
+        overlay.style.display = 'none';
     }
 
 });
