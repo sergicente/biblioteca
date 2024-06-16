@@ -10,6 +10,7 @@ const formularioAutor = document.querySelector('#inputAutor');
 const formularioPaginas = document.querySelector('#inputPaginas');
 const formularioLeido = document.querySelector('#inputLeido');
 const botonCerrar = document.querySelector('#botonCerrar');
+const overlay = document.querySelector('#overlay');
 let tituloNuevo = '';
 let autorNuevo = '';
 let paginasNuevo = '';
@@ -21,9 +22,11 @@ let leidoNuevo = false;
 botonNuevoLibro.addEventListener('click',()=>{
     popup.classList.toggle('activo');
     botonNuevoLibro.classList.add('oculto');
+    overlay.style.display = 'block';
 });
 botonCerrar.addEventListener('click',()=>{
     popup.classList.toggle('activo');
+    overlay.style.display = 'none';
     resetFormulario();
 });
 formularioTitulo.addEventListener('input', (e) => {

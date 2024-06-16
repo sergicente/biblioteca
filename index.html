@@ -14,14 +14,15 @@
     </header>
     <div id="biblioteca"></div>
     <button id="anadirLibro">add book</button>
+    <div id="overlay"></div>
     <div id="popup">
         <form id="formulario">
-            <input type="text" name="titulo" placeholder="Book title" id="inputTitulo" class="inputTexto">
+            <button type="button" id="botonCerrar" class="cerrarPopup">close</button>
+            <br><input type="text" name="titulo" placeholder="Book title" id="inputTitulo" class="inputTexto">
             <input type="text" name="autor" placeholder="Author" id="inputAutor" class="inputTexto">
             <input type="number" name="paginas" placeholder="Pages" id="inputPaginas" class="inputTexto">
             <div class="spanLeido"><input type="checkbox" name="leido" id="inputLeido"><span> I already read it</span></div>
             <button type="submit" id="botonEnviar">submit</button>
-            <button type="button" id="botonCerrar" class="cerrarPopup">close</button>
         </form>
     </div>
     <script src="app.js"></script>
