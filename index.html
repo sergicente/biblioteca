@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Libreria</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 id="tituloHeader">My book collection</h1>
+        </nav>
+    </header>
+    <div id="biblioteca"></div>
+    <button id="anadirLibro">add book</button>
+    <div id="popup">
+        <form id="formulario">
+            <input type="text" name="titulo" placeholder="Book title" id="inputTitulo" class="inputTexto">
+            <input type="text" name="autor" placeholder="Author" id="inputAutor" class="inputTexto">
+            <input type="number" name="paginas" placeholder="Pages" id="inputPaginas" class="inputTexto">
+            <div class="spanLeido"><input type="checkbox" name="leido" id="inputLeido"><span> I already read it</span></div>
+            <button type="submit" id="botonEnviar">submit</button>
+            <button type="button" id="botonCerrar" class="cerrarPopup">close</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

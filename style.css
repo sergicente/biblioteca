@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Poppins";
+}
+
+header{
+    background:white;
+    box-shadow: 0px 5px 10px #99999920;
+}
+
+nav{
+    max-width: 1200px;
+    margin:auto;
+
+}
+
+
+
+#tituloHeader{
+    padding: 2.5% 5%;
+    color: #444;
+    font-size: 2em;
+}
+
+#biblioteca{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:25px;
+    padding: 25px;
+    margin: auto;
+    max-width: 1200px;
+
+    @media only screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 720px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+#anadirLibro{
+    position:fixed;
+    background-color: #eee;
+    font-size: 1em;
+    color:#333;
+    box-shadow: 0px 5px 10px #99999920;
+    font-weight: 800;
+    border: none;
+    right:5%;
+    bottom:5%;
+    height: 60px;
+    width: 160px;
+    border-radius: 25px;
+    transform: translate(0, 0px);
+    transition: 0.2s ease-in-out;
+
+}
+
+#popup{
+    position:fixed;
+    z-index:99;
+    top: calc( 50% - 200px );
+    left: calc( 50% - 150px );
+    padding: 50px;
+    width:300px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px #99999950;
+    transform: scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+#botonEnviar{
+    background-color: #eee;
+    color:#666;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-top: 2em;
+    border: none;
+    width:100%;
+    height: 50px;
+    cursor:not-allowed
+}
+
+#inputLeido{
+    margin-right: 6px;
+}
+
+
+
+.activo{
+    transform: scale(1)!important;
+}
+
+.titulo{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px auto;
+}
+
+.autor{
+    font-size: 0.8em;
+}
+
+.paginas{
+    font-size: 0.7em;
+    margin: 10px auto;
+}
+
+.libro{
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px #99999920;
+    padding:5%;
+    text-align: center;
+}
+
+
+
+.autor{
+    font-style: italic;
+    margin: 10px auto;
+}
+
+
+
+.inputTexto{
+    width:200px;
+    height: 40px;
+    margin:1em auto;
+    padding:10px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #eeeeee90;
+}
+
+.inputIncorrecto{
+    background-color: rgba(240, 128, 128, 0.25);
+}
+
+.inputCorrecto{
+    background-color: rgba(144, 238, 144, 0.25);
+}
+
+.botonCorrecto{
+    background-color: lightgreen!important;
+    cursor: pointer!important;
+
+}
+
+.botonQuitar, .botonLeido{
+    background-color: #eee;
+    color:#666;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-top: 1em;
+    border: none;
+    width:100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.botonLeido.leido {
+    background-color: lightgreen;
+    color: 666;
+}
+
+.spanLeido{
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+.botonLeido:not(.leido) {
+    background-color: lightcoral;
+    color: white;
+}
+
+.cerrarPopup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 20px;
+    border: none;
+    background-color: lightcoral;
+    color: white;
+    font-weight: 800;
+    border-radius:10px;
+    font-weight: 600;
+    font-size: 12px; /* Reducir el tamaño del texto para centrarlo mejor */
+    line-height: 20px; /* Alinea verticalmente con la altura del círculo */
+    text-align: center; /* Centra el texto horizontalmente */
+    cursor: pointer;
+    outline: none;
+}
+
+.oculto{
+
+    transform: translate(0, 500px)!important;
+    transition: 0.2s ease-in-out;
+}
