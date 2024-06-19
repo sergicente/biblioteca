@@ -173,14 +173,14 @@ function actualizarColeccion(){
 
         let autor = document.createElement('p');
         autor.classList.add('autor');
-        autor.textContent = `by ${libro.autor}`;
+        autor.textContent = `por ${libro.autor}`;
 
         let paginas = document.createElement('p');
         paginas.classList.add('paginas');
-        paginas.textContent = `${libro.paginas} pages`;
+        paginas.textContent = `${libro.paginas} páginas`;
 
         let leido = document.createElement('button');
-        leido.textContent = libro.leido ? 'read' : 'not read';
+        leido.textContent = libro.leido ? 'leido' : 'no leido';
         leido.classList.add('botonLeido');
         if (libro.leido) {
             leido.classList.add('leido');
@@ -193,7 +193,7 @@ function actualizarColeccion(){
 
         let quitar = document.createElement('button');
         quitar.classList.add('botonQuitar');
-        quitar.textContent = 'remove';
+        quitar.textContent = 'quitar';
         quitar.dataset.indice = indice;
     
         libroNuevo.appendChild(titulo);
